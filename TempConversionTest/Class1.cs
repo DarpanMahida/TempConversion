@@ -138,5 +138,47 @@ namespace TempConversionTest
             Assert.AreEqual("It's quite comfortable", result);
 
         }
+        [Test]
+        public void Test1TempConverter_Input0point02_Returns_GettingCold()
+        {
+            // Arrange
+            var temp = new Temp();
+            float input = 0.02f;
+
+            // Act
+            var result = temp.TemperatureConverter(input);
+
+            // Assert
+            Assert.AreEqual("It's getting cold out there!", result);
+
+        }
+        [Test]
+        public void Test2TempConverter_Input4point00_Returns_GettingCold()
+        {
+            // Arrange
+            var temp = new Temp();
+            float input = 4.00f;
+
+            // Act
+            var result = temp.TemperatureConverter(input);
+
+            // Assert
+            Assert.AreEqual("It's getting cold out there!", result);
+
+        }
+        [Test]
+        public void Test3TempConverter_Input6point99_Returns_GettingCold()
+        {
+            // Arrange
+            var temp = new Temp();
+            float input = 6.99f;
+
+            // Act
+            var result = temp.TemperatureConverter(input);
+
+            // Assert
+            Assert.AreEqual("It's getting cold out there!", result);
+
+        }
     }
 }
