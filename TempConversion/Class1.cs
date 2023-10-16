@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TempConversion
 {
-    public class Class1
+    public class Temp
     {
         public string TemperatureConverter(float ambientTemp)
         {
