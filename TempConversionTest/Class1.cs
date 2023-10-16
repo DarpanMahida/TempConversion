@@ -180,5 +180,48 @@ namespace TempConversionTest
             Assert.AreEqual("It's getting cold out there!", result);
 
         }
+        [Test]
+        public void Test1TempConverter_Input45point99_Returns_UnaccetableRange()
+        {
+            // Arrange
+            var temp = new Temp();
+            float input = 45.99f;
+
+            // Act
+            var result = temp.TemperatureConverter(input);
+
+            // Assert
+            Assert.AreEqual("Your input temperature is not within the acceptable range", result);
+
+        }
+        [Test]
+        public void Test1TempConverter_Inputminus3point00_Returns_UnaccetableRange()
+        {
+            // Arrange
+            var temp = new Temp();
+            float input = -3.00f;
+
+            // Act
+            var result = temp.TemperatureConverter(input);
+
+            // Assert
+            Assert.AreEqual("Your input temperature is not within the acceptable range", result);
+
+        }
+        [Test]
+        public void Test1TempConverter_Input100_Returns_UnaccetableRange()
+        {
+            // Arrange
+            var temp = new Temp();
+            float input = 100f;
+
+            // Act
+            var result = temp.TemperatureConverter(input);
+
+            // Assert
+            Assert.AreEqual("Your input temperature is not within the acceptable range", result);
+
+        }
+
     }
 }
